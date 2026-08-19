@@ -44,6 +44,9 @@
         }
 
         nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             color: var(--ink-gray);
             text-decoration: none;
             margin-left: 20px;
@@ -51,6 +54,18 @@
             font-weight: 600;
             letter-spacing: 0.12em;
             transition: all 0.2s;
+        }
+
+        nav a svg,
+        .btn-group a svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1.7;
+            flex: 0 0 auto;
         }
 
         nav a:hover {
@@ -100,7 +115,10 @@
         }
 
         .btn-ink {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             background-color: var(--ink-black);
             color: var(--bg-paper);
             padding: 10px 24px;
@@ -117,7 +135,10 @@
         }
 
         .btn-outline {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             border: 2px solid var(--border-ink);
             color: var(--ink-black);
             padding: 8px 22px;
