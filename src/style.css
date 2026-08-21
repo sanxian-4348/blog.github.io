@@ -519,6 +519,170 @@
             padding-top: 18px;
         }
 
+        /* 程式解題頁 */
+        .coding-hero {
+            padding: 10px 0 34px;
+            border-bottom: 1px dashed var(--border-ink);
+            margin-bottom: 40px;
+        }
+
+        .coding-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.35;
+            margin-bottom: 20px;
+        }
+
+        .problem-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #666666;
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+        }
+
+        .problem-box,
+        .io-box {
+            border: 2px solid var(--border-ink);
+            background-color: #ffffff;
+            padding: 22px;
+        }
+
+        .problem-box {
+            margin-bottom: 20px;
+        }
+
+        .problem-label {
+            display: block;
+            color: #666666;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .problem-box h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .problem-box p,
+        .io-box p {
+            color: var(--ink-gray);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .io-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .solution-steps {
+            display: grid;
+            gap: 18px;
+            margin-bottom: 44px;
+        }
+
+        .solution-steps > div {
+            display: grid;
+            grid-template-columns: 42px 1fr;
+            gap: 14px;
+            border-bottom: 1px solid #bbbbbb;
+            padding-bottom: 16px;
+        }
+
+        .step-number {
+            color: #666666;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+        }
+
+        .solution-steps h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .solution-steps p {
+            color: var(--ink-gray);
+            font-size: 0.9rem;
+        }
+
+        .code-panel {
+            overflow: hidden;
+            border: 2px solid var(--border-ink);
+            background-color: #171717;
+            color: #f5f5f5;
+            margin-bottom: 24px;
+        }
+
+        .code-panel-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid #555555;
+            color: #cccccc;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+        }
+
+        .code-panel pre {
+            overflow-x: auto;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .code-panel code {
+            font-family: 'SFMono-Regular', Consolas, monospace;
+            font-size: 0.85rem;
+        }
+
+        .problem-tags {
+            border-top: 1px solid var(--border-ink);
+            padding-top: 18px;
+        }
+
+        .problem-directory {
+            border-top: 2px solid var(--border-ink);
+            margin-bottom: 38px;
+        }
+
+        .directory-row {
+            display: grid;
+            grid-template-columns: 56px minmax(150px, 1.6fr) 1fr 1fr;
+            align-items: center;
+            gap: 16px;
+            min-height: 58px;
+            padding: 10px 8px;
+            border-bottom: 1px solid #bbbbbb;
+            color: var(--ink-gray);
+            font-size: 0.9rem;
+        }
+
+        .directory-row strong {
+            color: var(--ink-black);
+            font-weight: 600;
+        }
+
+        .directory-heading {
+            min-height: 42px;
+            color: #666666;
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+        }
+
+        .directory-status {
+            color: #777777;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+        }
+
         /* 聯絡資訊 Contact */
         .contact-box {
             border: 2px solid var(--border-ink);
@@ -685,6 +849,35 @@
                 align-items: flex-start;
                 flex-direction: column;
                 gap: 4px;
+            }
+
+            .coding-hero h1 {
+                font-size: 2rem;
+            }
+
+            .problem-meta {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .io-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .directory-row {
+                grid-template-columns: 36px 1fr;
+                gap: 4px 12px;
+                padding: 12px 6px;
+            }
+
+            .directory-row > :nth-child(3),
+            .directory-row > :nth-child(4) {
+                grid-column: 2;
+            }
+
+            .directory-heading {
+                display: none;
             }
 
             .project-points {
