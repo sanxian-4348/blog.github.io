@@ -303,14 +303,45 @@
         }
 
         .project-link {
+            display: inline-block;
+            position: relative;
             color: inherit;
             text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .project-link::after {
+            content: '↗';
+            display: inline-block;
+            margin-left: 8px;
+            opacity: 0;
+            transform: translate(-5px, 5px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
         .project-link:hover,
         .project-link:focus-visible {
-            text-decoration: underline;
-            text-underline-offset: 4px;
+            color: #555555;
+            transform: translateX(5px);
+        }
+
+        .project-link:hover::after,
+        .project-link:focus-visible::after {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .project-link:active {
+            transform: translateX(5px) scale(0.94);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .project-link,
+            .project-link::after,
+            .click-pop {
+                animation: none;
+                transition: none;
+            }
         }
 
         .project-card p {
