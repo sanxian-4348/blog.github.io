@@ -49,9 +49,10 @@
             <div class="about-text">
                 <p style="margin-bottom: 12px;">
                     目前就讀雲林科技大學<b>智慧機器人學士學位學程(智慧跨域技優專班)</b>
+                    高中畢業於嘉義高工微電腦修護科，專長為<b>程式設計、電腦硬體維修、電子電路設計</b>。
                 </p>
                 <p style="margin-bottom: 12px;">
-                    鑽研 C#、C++、Python 與 C# Unity 遊戲設計與競程。
+                    鑽研 C#、C++、Python 和 PHP、SQL 與 C# Unity 遊戲設計與競程。
                 </p>
                 <p style="color: var(--ink-gray);">
                 
@@ -83,6 +84,8 @@
                     <span class="tag-item">C# / .NET</span>
                     <span class="tag-item">C++</span>
                     <span class="tag-item">PYTHON</span>
+                    <span class="tag-item">PHP</span>
+                    <span class="tag-item">SQL</span>
                     <span class="tag-item">UNITY</span>
                     
                     
@@ -100,7 +103,7 @@
         <div class="projects-grid">
             <div class="project-card">
                 <span class="project-num">PROJECT 01 / GAME LOGIC</span>
-                <h3>Hello Project</h3>
+                <h3><a class="project-link" href="public/project/project_helloworld.html" target="_blank" rel="noopener noreferrer">Hello Project</a></h3>
                 <p>專案產生中ing.....</p>
                 <div>
                     <span class="tag-item">GODOT</span>
@@ -109,7 +112,7 @@
             </div>
             <div class="project-card">
                 <span class="project-num">PROJECT 02 / SOFTWARE</span>
-                <h3>Hello Project</h3>
+                <h3><a class="project-link" href="public/project/project_b001.html" target="_blank" rel="noopener noreferrer">Hello Project</a></h3>
                 <p>世界探索中ing.....</p>
                 <div>
                     <span class="tag-item">C#</span>
@@ -127,8 +130,8 @@
         </div>
         <div class="projects-grid">
             <div class="project-card">
-                <span class="project-num">PROJECT 01 / GAME LOGIC</span>
-                <h3>Hello World</h3>
+                <span class="project-num">WORLD 01 / GAME LOGIC</span>
+                <h3><a class="project-link" href="public/world/world_a001.html" target="_blank" rel="noopener noreferrer">Hello World</a></h3>
                 <p>世界探索中ing.....</p>
                 <div>
                     <span class="tag-item">GODOT</span>
@@ -136,8 +139,8 @@
                 </div>
             </div>
             <div class="project-card">
-                <span class="project-num">PROJECT 02 / SOFTWARE</span>
-                <h3>Hello World</h3>
+                <span class="project-num">WORLD 02 / SOFTWARE</span>
+                <h3><a class="project-link" href="public/world/world_a002.html" target="_blank" rel="noopener noreferrer">Hello World</a></h3>
                 <p>世界探索中ing.....</p>
                 <div>
                     <span class="tag-item">C#</span>
@@ -181,6 +184,18 @@
     <footer>
         &copy; 2026 SANXIAN. MONOCHROME INK & CODE ARCHITECTURE.
     </footer>
+
+    <script>
+        document.addEventListener('click', (event) => {
+            const link = event.target.closest('a');
+            if (!link) return;
+
+            link.classList.remove('click-pop');
+            void link.offsetWidth;
+            link.classList.add('click-pop');
+            link.addEventListener('animationend', () => link.classList.remove('click-pop'), { once: true });
+        });
+    </script>
 
 </body>
 </html>
