@@ -75,6 +75,30 @@
             border-bottom: 2px solid var(--ink-black);
         }
 
+        .language-toggle {
+            flex: 0 0 auto;
+            border: 1px solid var(--border-ink);
+            background-color: var(--bg-paper);
+            color: var(--ink-black);
+            padding: 5px 9px;
+            font-family: 'Cinzel', 'Noto Serif TC', serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, transform 0.2s;
+        }
+
+        .language-toggle:hover,
+        .language-toggle:focus-visible {
+            background-color: var(--ink-black);
+            color: var(--bg-paper);
+        }
+
+        .language-toggle:active {
+            transform: scale(0.92);
+        }
+
         /* Hero 主視覺區塊 */
         .hero {
             padding: 10px 0 40px 0;
